@@ -1,0 +1,38 @@
+﻿<Window x:Class="CarDealership.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarDealership"
+        mc:Ignorable="d"
+        Title="Автосалон" Height="500" Width="950" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" >
+                <TextBlock Height="20" Margin="2" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="Автосалон" Margin="0 2 270 0" FontSize="17" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Width="200" Height="25" Margin="5"/>
+                    <Button Content="Поиск" Width="100" Margin="20" Background="DarkRed" Foreground="White"/>
+                    <Button Content="Добавить" Width="100" Height="25" Margin="20" Background="DarkRed" Foreground="White"/>
+                </StackPanel>
+            </StackPanel>
+            <Frame Grid.Row="1" x:Name="frame"/>
+        </Grid>
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <Button Content="Покупатели" Width="150" Height="40" Background="DarkRed" Foreground="White" Margin="0 60 0 0" Click="Button_Buyers"/>
+            <Button Content="Марки" Width="150" Height="40" Background="DarkRed" Foreground="White" Click="Button_Stamps"/>
+            <Button Content="Сотрудники" Width="150" Height="40" Background="DarkRed" Foreground="White" Click="Button_Staff"/>
+            <Button Content="Автомобили" Width="150" Height="40" Background="DarkRed" Foreground="White" Click="Button_Auto"/>
+            <Button Content="Продажи" Width="150" Height="40" Background="DarkRed" Foreground="White" Click="Button_Sales"/>
+        </StackPanel>
+    </Grid>
+</Window>
